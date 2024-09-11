@@ -55,4 +55,4 @@ class Solution {
 }
 //bottom-up
 //TC: O(N)
-//SC: O(N)
+//SC: O(H), Height of tree, If it's balanced then O(logN)
