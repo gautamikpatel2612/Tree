@@ -28,7 +28,7 @@ Example 3:
  */
 class Solution {
     public TreeNode invertTree(TreeNode root) {
-        // Base case: if the tree is empty, return null.
+// Base case: if the tree is empty, return null.
         if(root==null){
             return root;
         }
