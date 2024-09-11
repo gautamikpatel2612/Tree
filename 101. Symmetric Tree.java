@@ -29,30 +29,28 @@ Output: false
 class Solution {
     
     public boolean isSymmetric(TreeNode root) {
-//  Check if the tree is symmetric by comparing the root with itself.
+//Check if the tree is symmetric by comparing the root with itself.
     return isSame(root, root);
     }
 
     private boolean isSame(TreeNode p, TreeNode q){
-//      If both nodes are null, they are symmetric (base case).
+//If both nodes are null, they are symmetric (base case).
         if(p==null && q==null){
             return true;
         }
-//      If one node is null and the other is not, they are not symmetric.
+//If one node is null and the other is not, they are not symmetric.
         if(p==null || q==null){
             return false;
         }
-//      If the values of the two nodes are different, they are not symmetric.
+//If the values of the two nodes are different, they are not symmetric.
         if(p.val!=q.val){
             return false;
         }
-
-//      Recursively check if the left subtree of node is a mirror 
-//      of the right subtree and right of left
+//Recursively check if the left subtree of node is a mirror of the right subtree and right of left
         boolean left =isSame(p.left, q.right);
         boolean right = isSame(p.right, q.left);
-
-//      Return true if both left and right subtrees are symmetric.
+        
+//Return true if both left and right subtrees are symmetric.
         return left && right;
     }
 }
